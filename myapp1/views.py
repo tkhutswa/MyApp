@@ -79,7 +79,7 @@ def handle_login(request):
         if not user["Email"]:
             return JsonResponse({"status": "Failed", "message": "Authentication Failed"})
 
-        if user["Password"] == password and user['Email'] == email:
+        if user["Password"] == password and user["Email"] == email:
             time.sleep(6)
             return redirect('success_login')
         else:
