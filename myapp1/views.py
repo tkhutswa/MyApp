@@ -74,12 +74,12 @@ def handle_login(request):
         if not email or not password:
             return JsonResponse({"status": "failed", "message": "Email and Password are required"})
 
-        user = collection.find_one()
+        user = collection.find_one({"Email": email})
 
-        if not user["Email"]:
+        if not user:
             return JsonResponse({"status": "Failed", "message": "Authentication Failed"})
 
-        if user["Password"] == password and user["Email"] == email:
+        if user["Password"] == password:
             time.sleep(6)
             return redirect('success_login')
         else:
