@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Successful</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: #fff;
+        }
+
+        .success-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .success-container h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .success-container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .success-container .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: #fff;
+            color: #2575fc;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        .success-container .btn:hover {
+            background: #2575fc;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #00ff7f;
+            animation: popIn 1.2s ease-out;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+            }
+            60% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">✔️</div>
+        <h1>Login Successful!</h1>
+        <p>Welcome back ! You have successfully logged into your account.</p>
+        <a href="/home" class="btn">Go to Main Page</a>
+    </div>
+</body>
+</html>

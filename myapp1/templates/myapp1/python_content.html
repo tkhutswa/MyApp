@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Tutorials - PyExpress</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background: #fff;
+            color: #333;
+            padding: 1.5rem 1rem;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+            color: #2a5298;
+            font-weight: 700;
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .upload-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .upload-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .upload-section input[type="file"] {
+            padding: 0.5rem;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .upload-section button {
+            padding: 0.8rem 1.5rem;
+            background: #2a5298;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .upload-section button:hover {
+            background: #1e3c72;
+            transform: translateY(-3px);
+        }
+
+        .tutorials-section {
+            text-align: left;
+        }
+
+        .tutorial-card {
+            background: #fff;
+            color: #333;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .tutorial-card h3 {
+            margin: 0 0 1rem 0;
+            font-size: 1.2rem;
+            color: #2a5298;
+        }
+
+        .tutorial-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .tutorial-card a {
+            text-decoration: none;
+            color: #2a5298;
+            font-weight: 600;
+        }
+
+        .tutorial-card a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 1rem;
+            }
+
+            .upload-section {
+                padding: 1rem;
+            }
+
+            .tutorial-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Python Tutorials</h1>
+    </header>
+    <main>
+        <section class="upload-section">
+            <h2>Upload a Tutorial</h2>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" name="tutorial_file" accept=".pdf,.docx,.txt" required>
+                <button type="submit">Upload Tutorial</button>
+            </form>
+        </section>
+        <section class="tutorials-section">
+            <h2>Available Tutorials</h2>
+            <div class="tutorial-card">
+                <h3>Getting Started with Python</h3>
+                <p>A beginner's guide to setting up Python and writing your first program.</p>
+                <a href="/tutorials/getting-started">Read More</a>
+            </div>
+            <div class="tutorial-card">
+                <h3>Python Data Structures</h3>
+                <p>An introduction to lists, dictionaries, tuples, and sets in Python.</p>
+                <a href="/tutorials/data-structures">Read More</a>
+            </div>
+            <div class="tutorial-card">
+                <h3>Advanced Python Techniques</h3>
+                <p>Explore decorators, generators, and other advanced Python features.</p>
+                <a href="/tutorials/advanced-techniques">Read More</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

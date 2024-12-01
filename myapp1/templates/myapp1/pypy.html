@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Tutorials</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #fff;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+
+        header {
+            background: #000;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #d3d3d3;
+        }
+
+        header .search-bar {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        header input[type="search"] {
+            width: 90%;
+            max-width: 500px;
+            padding: 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: background 0.3s ease;
+        }
+
+        header input[type="search"]:focus {
+            background: rgba(255, 255, 255, 0.2);
+            outline: none;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .categories button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .categories button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 1rem;
+            margin: 2rem 0;
+        }
+
+        .video-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .video-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .video-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .video-card p {
+            font-size: 1rem;
+            color: #d3d3d3;
+        }
+
+        .video-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: #2575fc;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .video-card a:hover {
+            background: #6a11cb;
+        }
+
+        footer {
+            text-align: center;
+            background: #000;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        footer a {
+            color: #2575fc;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #6a11cb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Python Tutorials</h1>
+        <p>Your gateway to mastering Python with interactive and concise tutorials.</p>
+        <div class="search-bar">
+            <input type="search" placeholder="Search for Python tutorials...">
+        </div>
+    </header>
+
+    <div class="categories">
+        <button>Beginner</button>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-card">
+            <img src="https://via.placeholder.com/300x160" alt="Video Thumbnail">
+            <h3>Introduction to Python</h3>
+            <p>Learn the basics of Python programming.</p>
+            <a href="#">Watch Now</a>
+        </div>
+        <div class="video-card">
+            <img src="https://via.placeholder.com/300x160" alt="Video Thumbnail">
+            <h3>Python Syntax and Basic Data Types</h3>
+            <p> foundational syntax and key data types used in Python.</p>
+            <a href="#">Watch Now</a>
+        </div>
+        <div class="video-card">
+            <img src="https://via.placeholder.com/300x160" alt="Video Thumbnail">
+            <h3>Operators and Expressions</h3>
+            <p>Understand how to manipulate data and perform operations.</p>
+            <a href="#">Watch Now</a>
+        </div>
+        <div class="video-card">
+            <img src="https://via.placeholder.com/300x160" alt="Video Thumbnail">
+            <h3>Control Flow: Decision-Making</h3>
+            <p>how to write conditional code.</p>
+            <a href="https://www.youtube.com/watch?v=TzM0Nne_f_Q&ab_channel=CloudWithDjango">Watch Now</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 AlgoNest. Built with love for Python enthusiasts. <a href="https://github.com/tkhutswa/tkhutswa" target="_blank">Follow me on GitHub</a>.</p>
+    </footer>
+</body>
+</html>
