@@ -64,7 +64,46 @@ def python_content(request):
     return render(request, "myapp1/python_content.html")
 
 
+from django.http import JsonResponse
+from django.shortcuts import redirect
+import time
+from pymongo import MongoClient
+
 def handle_login(request):
+    if request.method == 'POST':
+        # Assuming `db` is already defined elsewhere or you set it here
+        collection = db['Users']  # Make sure the collection is correct
+        
+        # Retrieve POST data
+        email = request.POST.get("Email")
+        password = request.POST.get("Password")
+
+        # Check if email or password is missing
+        if not email:
+            return JsonResponse({"status": "failed", "message": "Email and Password are required"})
+
+        # Fetch user by email
+        user = collection.find_one({"Email": email})
+
+        # If no user found, authentication fails
+        if not user.get("Email"):
+            return JsonResponse({"status": "failed", "message": "Authentication Failed"})
+
+        # Check if the password matches
+        if user.get("Password") == password:
+            # Simulate a delay (not recommended for production)
+            time.sleep(6)
+            return redirect('success_login')  # Redirect on successful login
+        else:
+            return JsonResponse({"status": "failed", "message": "Invalid credentials"})
+
+    # If not a POST request, return error message
+    return JsonResponse({"status": "failed", "message": "Only POST requests are allowed"})
+
+
+
+
+#def handle_login(request):
     if request.method == 'POST':
         collection = db['Users']
 
@@ -79,7 +118,7 @@ def handle_login(request):
         if not user:
             return JsonResponse({"status": "Failed", "message": "Authentication Failed"})
 
-        if user["Password"] == password:
+        if user.get("Password") == password:
             time.sleep(6)
             return redirect('success_login')
         else:
